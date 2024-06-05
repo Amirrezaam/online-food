@@ -1,0 +1,104 @@
+.container {
+    width: 100%;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    padding: 2rem;
+    padding-top: 1rem;
+    border-radius: .75rem;
+    box-shadow: 0 0 10px 1px #000 inset;
+    width: 35%;
+    height: 80%;
+}
+
+.title{
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+}
+
+.input_box {
+    position: relative;
+    overflow: hidden;
+    margin-top: .5rem;
+    margin-bottom: 0;
+}
+
+.input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    padding: .5rem;
+    color: #fff;
+    font-size: 18px;
+    transition: all .3s;
+    margin-top: 1rem;
+}
+
+.border_active {
+    width: 100%;
+    height: 1px;
+    background-color: var(--orange);
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    transition: all .3s;
+}
+
+.input:focus+.border_active {
+    left: 0;
+}
+
+.active_text {
+    position: absolute;
+    top: 2rem;
+    font-size: 16px;
+    left: .5rem;
+    transition: all .3s;
+    color: rgb(154, 154, 154);
+    z-index: -1;
+}
+
+.input:focus~.active_text {
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+.input[value]:not([value=""], :focus)~.active_text {
+    top: 0;
+    left: 0;
+    color: rgb(154, 154, 154);
+}
+
+.error_text {
+    color: red;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: .5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .content {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 90%;
+    }
+}
+

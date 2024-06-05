@@ -1,0 +1,15 @@
+.sidebar{
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 10px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right .4s;
+    z-index: 99999999999999999;
+}
+
+.sidebar ul li{
+    color: #fff;
+}
